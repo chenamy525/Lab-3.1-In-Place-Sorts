@@ -15,5 +15,5 @@ public class InPlaceSorts {
 	
 	public static void bubbleSort(String [] list1) {
 		
-	}
+		}
 }
