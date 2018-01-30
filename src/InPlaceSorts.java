@@ -16,15 +16,27 @@ public class InPlaceSorts {
 		System.out.println(Arrays.toString(test1));
 		
 		//Selection Sort Test
-		
+		start = System.nanoTime();
+		selectionSort(test2);
+		end = System.nanoTime();
+		time = end - start;
+		System.out.println("Test2 took: " + time + "nanoseconds.");
+		System.out.println(Arrays.toString(test2));
 		
 		//Bubble Sort Test
+		start = System.nanoTime();
+		bubbleSort(test3);
+		end = System.nanoTime();
+		time = end - start;
+		System.out.println("Test3 took: " + time + "nanoseconds.");
+		System.out.println(Arrays.toString(test3));
 	}
 	
 	public static void insertionSort(int [] list1) {
 		for (int i = 0; i < list1.length; i++) {
-			
-
+			if (i > (i+1))
+				i++;
+			//?
 		}
 				
 	}
@@ -45,7 +57,7 @@ public class InPlaceSorts {
 	public static void bubbleSort(String [] list1) {
 		for (int i = 0; i < list1.length; i++) {
 			for (int j = 0; j < list1.length-i; j++) {
-				if (list1[j].length > list1[j+1].length) {
+				if (list1[j].length() > list1[j+1].length()) { //?????
 					String y = list1[i];
 					list1[i] = list1[i+1];
 					list1[i+1] = y;
