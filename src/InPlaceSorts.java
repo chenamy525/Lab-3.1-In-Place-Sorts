@@ -34,7 +34,7 @@ public class InPlaceSorts {
 	
 	public static void insertionSort(int [] list1) {
 		for (int i = 0; i < list1.length; i++) {
-			if (i > (i+1))
+			if (list1[i] > list1[i+1])
 				i++;
 			//?
 		}
