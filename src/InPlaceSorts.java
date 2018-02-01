@@ -1,4 +1,9 @@
-
+/*
+ * Author: Amy Chen
+ * 2/1/18
+ * Lab 3.1 In place sorts
+ * 
+ */
 public class InPlaceSorts {
 
 	public static void main(String[] args) {
@@ -34,23 +39,22 @@ public class InPlaceSorts {
 	
 	public static void insertionSort(int [] list1) {
 		for (int i = 0; i < list1.length; i++) {
-			if (list1[i] > list1[i+1])
-				i++;
-			//?
-		}
+			//add diff loop						for (int j = 0; j < list1.length-i; j++) { 
 				
-	}
+			}
+		}		
+	//}
 	
 	public static void selectionSort(double [] list1) {
 		for (int i = 0; i < list1.length; i++) {
-			while (list1[i] > list1[i+1]) {
-				i++;
+			int index = i;
+			for (int j = 0; j < list1.length; j++) {
+				if (list1[j] < list1[index])
+					index = j;	
 			}
-			if (list1[i] < list1[i+1]) {
-				double z = list1[i];
-				list1[i+1] = list1[i];
-				list1[i] = z;
-			}
+			double smallest = list1[index];
+			list1[index] = list1[i];
+			list1[i] = smallest;
 		}
 	}
 	
